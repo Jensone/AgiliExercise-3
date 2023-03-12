@@ -1,0 +1,150 @@
+/* Variables **************************************************/
+:root {
+    --dark: #151515;
+    --light: #FFFFFF;
+    --moon: #F9F9F9;
+    --sun: #F5DE1A;
+}
+
+/* Reset ******************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+ul, ol { list-style: none; }
+
+/* Typography *************************************************/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Tilt Neon', cursive;
+}
+.text-small { font-size: 0.8em; }
+.text-normal { font-size: 1em; }
+.text-medium { font-size: 1.5em; }
+.text-large { font-size: 2em; }
+
+/* Sidebar style ***********************************************/
+.sidebar_menu { cursor: pointer; }
+
+/* État fermé */
+.sidebar.active {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    text-align: center;
+    color: var(--dark);
+    background-color: var(--sun);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.35);
+    transition: width 300ms ease-out,
+                color 200ms ease-out;
+}
+/* État ouvert (Écris ton code ici ⬇) */
+.sidebar {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 0px;
+    overflow: hidden;
+    text-align: center;
+    color: var(--sun);
+    background-color: var(--sun);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.35);
+    transition: width 300ms ease-in,
+                color 200ms ease-out;
+}
+
+
+/* Global style ***********************************************/
+nav {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.35);
+}
+.nav_items { gap: 1em; }
+main header {
+    background-color: var(--sun);
+    padding: 8.5em 5em 5em 5em;
+}
+main section {
+    justify-content: center;
+    background-color: var(--moon);
+}
+.countries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+    justify-items: center;
+}
+.country_item {
+    background-color: var(--moon);
+    padding: 1em;
+    margin: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 250ms ease-in;
+}
+.country_item:hover {
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    transition: box-shadow 250ms ease-in;
+}
+.country_item img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 1em;
+}
+.country_item h4 {
+    padding: 0.5em;
+}
+
+/* Responsive settings *******************************************/
+@media screen and (max-width: 768px) {
+    main header {
+        padding: 6em 3em 3em 3em;
+    }
+    .nav_items { display: none !important; }
+    .countries {
+        grid-template-columns: 1fr;
+    }
+    .country_item {
+        width: 80%;
+    }
+}
+
+/* Flexbox settings *******************************************/
+.flex { display: flex; }
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-center { justify-content: center; align-items: center; }
+.flex-justify-space-between { justify-content: space-between; }
+.flex-justify-space-around { justify-content: space-around; }
+.flex-justify-center { justify-content: center; }
+.flex-justify-end { justify-content: flex-end; }
+.flex-justify-start { justify-content: flex-start; }
+.flex-justify-evenly { justify-content: space-evenly; }
+.flex-justify-items-start { justify-items: flex-start; }
+.flex-justify-items-center { justify-items: center; }
+.flex-justify-items-end { justify-items: flex-end; }
+.flex-justify-items-stretch { justify-items: stretch; }
+.flex-justify-items-baseline { justify-items: baseline; }
+.flex-align-start { align-items: flex-start; }
+.flex-align-center { align-items: center; }
+.flex-align-end { align-items: flex-end; }
+.flex-align-stretch { align-items: stretch; }
+.flex-align-baseline { align-items: baseline; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-wrap-reverse { flex-wrap: wrap-reverse; }
+.flex-wrap-nowrap { flex-wrap: nowrap; }
+.flex-align-content-start { align-content: flex-start; }
+.flex-align-content-center { align-content: center; }
+.flex-align-content-end { align-content: flex-end; }
+.flex-align-content-stretch { align-content: stretch; }
+.flex-align-content-between { align-content: space-between; }
+.flex-align-content-around { align-content: space-around; }
+.flex-align-content-evenly { align-content: space-evenly; }
