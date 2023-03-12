@@ -14,7 +14,7 @@ L'interface est déjà prête, cependant, il faut encore ajouter les fonctionnal
 
 À l'aide des connaissances que vous avez acquises jusqu'à présent, vous devez afficher la liste des pays de l'Europe :
 
-![exercice](./assets/images/image.png)
+![exercice](./assets/images/ui.png)
 
 Les cartes doivent contenir les informations suivantes :
 
