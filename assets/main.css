@@ -16,7 +16,7 @@
 ul, ol { list-style: none; }
 
 /* Typography *************************************************/
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, h1 span {
     font-family: 'Tilt Neon', cursive;
 }
 .text-small { font-size: 0.8em; }
@@ -148,3 +148,7 @@ main section {
 .flex-align-content-between { align-content: space-between; }
 .flex-align-content-around { align-content: space-around; }
 .flex-align-content-evenly { align-content: space-evenly; }
+.gap-1 { 
+    gap: 1em;
+    cursor: pointer;
+}
